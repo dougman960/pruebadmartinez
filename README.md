@@ -9,7 +9,7 @@ docker build -t dmartinezl.prueba:v1
 docker network create --driver nat prueba-servicios
 
 --Ejecutar Aplicacion dentro del contenedor
-docker run -p 8060:8060 --name dmartinezl.prueba --network prueba-servicios dmartinezl.prueba:v1
+docker run -p 8080:8080 --name dmartinezl.prueba --network prueba-servicios dmartinezl.prueba:v1
 
 # Jar ubicacion
 \dmartinezl.prueba\target
