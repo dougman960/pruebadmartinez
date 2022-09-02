@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "6003876b-d0ef-43a8-8985-ac6d95f87351",
+		"name": "pruebaNTTDATA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17112231"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "localhost:8080/api/clientes/delete?id=1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/clientes/delete?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/clientes/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"clienteId\": 1,\r\n        \"contrasena\": \"inieste39\",\r\n        \"estado\": \"A\",\r\n        \"persona\": {\r\n            \"clienteId\": 1,\r\n            \"genero\": \"M\",\r\n            \"edad\": 26,\r\n            \"identificacion\": \"092626023\",\r\n            \"direccion\": \"MALASIA Y LA 40\",\r\n            \"telefono\": \"0955474575\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/clientes/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/clientes/find?identificacion=092626023",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/clientes/find?identificacion=092626023",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"find"
+							],
+							"query": [
+								{
+									"key": "identificacion",
+									"value": "092626023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/clientes/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"contrasena\":\"inieste34\",\r\n   \"estado\":\"A\",\r\n   \"persona\":\r\n     {\r\n         \"genero\":\"M\",\r\n         \"edad\":\"26\",\r\n         \"identificacion\":\"092626023\",\r\n         \"direccion\":\"MALASIA Y LA 39\",\r\n         \"telefono\":\"09554788875\"\r\n      }\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/clientes/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuenta",
+			"item": [
+				{
+					"name": "localhost:8080/api/cuentas/delete?numeroCuenta=585545",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/cuentas/delete?numeroCuenta=585545",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "585545"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/cuentas/create?clienteId=1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"numeroCuenta\": 585545,\r\n            \"tipoCuenta\":\"Ahorro\",\r\n            \"saldoInicial\":1000,\r\n            \"estado\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/cuentas/create?clienteId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"create"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/cuentas/find?numeroCuenta=478758 ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/cuentas/find?numeroCuenta=478758 ",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"find"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "478758 "
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movimientos",
+			"item": [
+				{
+					"name": "localhost:8080/api/movimientos/find?numeroCuenta=478758&fechaDesde=09/02/2022&fechaHasta=09/02/2022",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/movimientos/find?numeroCuenta=478758&fechaDesde=09/02/2022&fechaHasta=09/02/2022",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movimientos",
+								"find"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "478758"
+								},
+								{
+									"key": "fechaDesde",
+									"value": "09/02/2022"
+								},
+								{
+									"key": "fechaHasta",
+									"value": "09/02/2022"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/movimientos/acreditar?numeroCuenta=478758",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor\" : 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/movimientos/acreditar?numeroCuenta=478758",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movimientos",
+								"acreditar"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "478758"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/movimientos/debitar?numeroCuenta=478758",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor\" : 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/movimientos/debitar?numeroCuenta=478758",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movimientos",
+								"debitar"
+							],
+							"query": [
+								{
+									"key": "numeroCuenta",
+									"value": "478758"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
